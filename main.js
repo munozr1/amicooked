@@ -11,7 +11,7 @@ async function fetchAssignments() {
   };
 
   try {
-    const response = await fetch("https://uta.instructure.com/api/v1/users/169372/courses/210219/assignments?include[]=submission&per_page=100&include[]=score_statistics", requestOptions);
+    const response = await fetch("https://uta.instructure.com/api/v1/users/<your user id>/courses/<your course id>/assignments?include[]=submission&per_page=100&include[]=score_statistics", requestOptions);
     const result = await response.json();
     return result;
   } catch (error) {
